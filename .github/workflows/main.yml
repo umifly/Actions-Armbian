@@ -12,18 +12,17 @@ on:
 #    types: started
 
 env:
-  RELEASE_SOURCE_TAG: v2017.11
   BUILD_MINIMAL: yes
   KERNEL_ONLY: no
   KERNEL_CONFIGURE: no
-  BOARD: orangepilite
-  BRANCH: next
-  RELEASE: jessie
+  BOARD: orangepi3b
+  BRANCH: edge
+  RELEASE: jammy
   BUILD_DESKTOP: no
 
 jobs:
   build:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
